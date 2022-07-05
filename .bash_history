@@ -87,3 +87,61 @@ docker build -t java-app .
 nano Dockerfile
 docker build -t java-app .
 nano Dockerfile
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.keysudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+yum install fontconfig java-11-openjdk
+yum install jenkins
+systemctl start jenkins.service 
+systemctl enable jenkins.service 
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword 
+sudo ss -tulpn
+systemctl status jenkins.service 
+docker ps -a
+sudo firewall-cmd --add-port=8080/tcp --permanent
+sudo firewall-cmd --reload
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword 
+java -jar jenkins-cli.jar -s http://192.168.31.238:8080/ -webSocket help
+wget http://192.168.31.238:8080/jnlpJars/jenkins-cli.jar
+java -jar jenkins-cli.jar -s http://192.168.31.238:8080/ -webSocket help
+java -jar jenkins-cli.jar -s http://192.168.31.238:8080/ -who-am-i
+java -jar jenkins-cli.jar -s http://192.168.31.238:8080/ who-am-i
+nano token
+java -jar jenkins-cli.jar -s http://192.168.31.238:8080/ -auth @token who-am-i
+java -jar jenkins-cli.jar -s http://192.168.31.238:8080/ who-am-i
+java -jar jenkins-cli.jar -s http://192.168.31.238:8080/ -auth @token who-am-i
+java -jar jenkins-cli.jar -s http://192.168.31.238:8080/ -auth @token install-plugin nodejs
+git clone https://github.com/rufatzakirov/java-web-server
+rm -rf .git
+git init
+git add .
+git commit -m "initial commit"
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:zombiie151/java.git
+git push -u origin main
+cat /home/ansible/.ssh/id_rsa.pub
+git commit -m "first commit"
+git remote add origin git@github.com:zombiie151/java.git
+git push
+git remote add origin git@github.com:zombiie151/java.git
+git push -u origin main
+su ansible
+ssh-keygen 
+cat /root/.ssh/id_rsa.pub
+ls
+cd java-web-server/
+ls
+git push
+git push -u origin main
+git remote -v
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:zombiie151/java.git
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:zombiie151/java.git
+git push -u origin main
